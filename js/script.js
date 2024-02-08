@@ -54,19 +54,39 @@ button.addEventListener("click",
             grid.append(squareElement);
             squareElement.append(contentElement);
 
+            let score;
+            
             contentElement.addEventListener("click", 
             function(){
+                
                 if (bombElement.includes(Number(contentElement.innerHTML))) {
-                    console.log(this.innerText = 'bomba');
-                    this.classList.toggle("content_activation_bomb");
-                    squareElement.classList.toggle("activation");
+                    
+
+                    for (i = 0; i < gridNumber; i++){
+
+                        let allBombs = document.querySelectorAll(".button-11__content");
+
+                        if (bombElement.includes(Number(i))){
+                            let bombs = allBombs[i - 1];
+                            console.log(bombs.innerHTML = '<img src=\'../img/gash_antipersonnel_grenade_consumable_cyberpunk_2077_wiki_guide_150px.png\' width=\'80px\' height=\'80px\'>');
+                            bombs.classList.add("content_activation_bomb");
+                            squareElement.classList.add("activation");
+                        }
+
+                    }
+
+                
                 } else {
                     console.log(this.innerText);
-                    this.classList.toggle("content_activation");
-                    squareElement.classList.toggle("activation");
+                    this.classList.add("content_activation");
+                    squareElement.classList.add("activation");  
+                    
+                    score += Number(1);
+                    console.log(score);
                 }
 
             })
+
 
         } 
 
@@ -74,3 +94,4 @@ button.addEventListener("click",
         
        
 });
+
