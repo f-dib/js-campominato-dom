@@ -1,6 +1,10 @@
 let button = document.querySelector("#button");
 let grid = document.querySelector("#grid");
 
+// EXPERIMENT BONUS 1
+let message = document.createElement('div');
+message.classList.add('my_layer');
+
 
 button.addEventListener("click", 
     function(){ 
@@ -63,9 +67,7 @@ button.addEventListener("click",
             grid.append(squareElement);
             squareElement.append(contentElement);
 
-            // EXPERIMENT BONUS 1
-            let message = document.createElement('div');
-            message.classList.add('my_layer');
+
             
             contentElement.addEventListener("click", 
             function(){
@@ -82,7 +84,7 @@ button.addEventListener("click",
                             bombs.innerHTML = '<img src=\'../img/gash_antipersonnel_grenade_consumable_cyberpunk_2077_wiki_guide_150px.png\' width=\'80px\' height=\'80px\'>';
                             bombs.classList.add("content_activation_bomb");
                             squareElement.classList.add("activation");
-
+                            lose();
                         }
 
                     }
@@ -106,3 +108,7 @@ button.addEventListener("click",
         }        
        
 });
+
+function lose(){
+    grid.append(message);
+}

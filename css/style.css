@@ -100,10 +100,10 @@ body {
 /* EXPERIMENT BONUS 1 */
 .my_layer {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    left: 0;
     width: 800px;
-    height: 800px;
-    background-color: rgba(0, 0, 0, 0.2);
+    height: 820px;
+    background-color: black;
     z-index: 10;
 }
