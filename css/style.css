@@ -1,0 +1,78 @@
+body {
+    background-image: url('../img/snapedit_1707390661297\ \(1\).png');
+    background-size: cover;
+    background-position: top;
+}
+
+.my-btn {
+    touch-action: manipulation;
+    position: relative;
+    padding: 10px 5px;
+    width: 100px;
+    border: 2px solid #ff29ff;
+    outline: none;
+    background-color: #2dffff;
+    border-radius: 20px;
+    box-shadow: 3px 10px 12.5px rgba(0, 0, 0, 0.2);
+    transition: 0.13s ease-in-out;
+    cursor: pointer;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square100 {
+    width: 800px;
+}
+
+.square81 {
+    width: 720px;
+}
+
+.square49 {
+    width: 560px;
+}
+
+.button-11 {
+    touch-action: manipulation;
+    position: relative;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #2dffff;
+    outline: none;
+    background-color: #f4f5f6;
+    border-radius: 20px;
+    box-shadow: 3px 10px 12.5px rgba(0, 0, 0, 0.2);
+    transition: 0.13s ease-in-out;
+    cursor: pointer;
+}
+
+.button-11__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* display: grid; ********vecchia impostazione*********/
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: inset 0px -4px 0px #dddddd, 0px -4px 0px #f4f5f6;
+    border-radius: 20px;
+    transition: 0.13s ease-in-out;
+    z-index: 1;
+}
+
+.activation {
+    box-shadow: none!important;
+}
+
+.content_activation {
+    background-color: #2dffff;
+    box-shadow: none!important;
+    border: 2px solid #ff29ff;
+}
