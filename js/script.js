@@ -1,6 +1,7 @@
 let button = document.querySelector("#button");
 let grid = document.querySelector("#grid");
 
+
 button.addEventListener("click", 
     function(){ 
 
@@ -8,6 +9,12 @@ button.addEventListener("click",
         let gridNumber;
         let difficulty = document.querySelector("#difficulty-menu").value;
 
+        if (difficulty == '') {
+            grid.classList.remove('square49');
+            grid.classList.remove('square81');
+            grid.classList.remove('square100');
+            gridNumber = Number(0);
+        }
         if (difficulty == 'difficulty-1') {
             grid.classList.add('square100');
             grid.classList.remove('square81');
@@ -43,6 +50,8 @@ button.addEventListener("click",
 
         /*       CREAZIONE GRIGLIA IN BASE AL LIVELLO        */
         grid.innerHTML = "";
+        let score = [];
+        document.querySelector(".point").innerHTML = "0";
         
         for (i = 0; i < gridNumber; i++) {
         
@@ -54,7 +63,9 @@ button.addEventListener("click",
             grid.append(squareElement);
             squareElement.append(contentElement);
 
-            let score;
+            // EXPERIMENT BONUS 1
+            let message = document.createElement('div');
+            message.classList.add('my_layer');
             
             contentElement.addEventListener("click", 
             function(){
@@ -62,15 +73,16 @@ button.addEventListener("click",
                 if (bombElement.includes(Number(contentElement.innerHTML))) {
                     
 
-                    for (i = 0; i < gridNumber; i++){
+                    for (let i = 0; i <= gridNumber; i++){
 
                         let allBombs = document.querySelectorAll(".button-11__content");
 
                         if (bombElement.includes(Number(i))){
                             let bombs = allBombs[i - 1];
-                            console.log(bombs.innerHTML = '<img src=\'../img/gash_antipersonnel_grenade_consumable_cyberpunk_2077_wiki_guide_150px.png\' width=\'80px\' height=\'80px\'>');
+                            bombs.innerHTML = '<img src=\'../img/gash_antipersonnel_grenade_consumable_cyberpunk_2077_wiki_guide_150px.png\' width=\'80px\' height=\'80px\'>';
                             bombs.classList.add("content_activation_bomb");
                             squareElement.classList.add("activation");
+
                         }
 
                     }
@@ -79,19 +91,18 @@ button.addEventListener("click",
                 } else {
                     console.log(this.innerText);
                     this.classList.add("content_activation");
-                    squareElement.classList.add("activation");  
+                    squareElement.classList.add("activation"); 
                     
-                    score += Number(1);
-                    console.log(score);
+                    if (score.includes(Number(contentElement.innerHTML))){
+
+                    } else {
+                        score.push(Number(contentElement.innerHTML));
+                        document.querySelector(".point").innerHTML = `${score.length}`;
+                    } 
                 }
-
+                
             })
-
-
-        } 
-
-
-        
+            
+        }        
        
 });
-

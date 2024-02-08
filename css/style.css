@@ -23,6 +23,7 @@ body {
 #grid {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .square100 {
@@ -83,4 +84,26 @@ body {
     background-color: #ff29ff;
     box-shadow: none!important;
     border: 2px solid #2dffff;
+}
+
+.point {
+    width: 70px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #2dffff;
+    color: #ff29ff;
+    border: 3px solid #ff29ff;
+    border-radius: 5px;
+}
+
+/* EXPERIMENT BONUS 1 */
+.my_layer {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 800px;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
