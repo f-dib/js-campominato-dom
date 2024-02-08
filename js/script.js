@@ -1,10 +1,10 @@
 let button = document.querySelector("#button");
 let grid = document.querySelector("#grid");
 
-
 button.addEventListener("click", 
     function(){ 
 
+        /*           SELETTORE DIFFICOLTA'            */ 
         let gridNumber;
         let difficulty = document.querySelector("#difficulty-menu").value;
 
@@ -27,6 +27,21 @@ button.addEventListener("click",
             gridNumber = Number(49);
         }
 
+        // /*       CREAZIONE DI ARRAY GENERICO        */
+        let bombElement = [];
+
+        while (bombElement.length < 16) {
+            let randomNumber = (Math.floor(Math.random() * gridNumber) + 1);
+
+            if (!bombElement.includes(randomNumber)){
+                bombElement.push(randomNumber);
+            }
+
+        }
+                
+        console.log(bombElement)
+
+        /*       CREAZIONE GRIGLIA IN BASE AL LIVELLO        */
         grid.innerHTML = "";
         
         for (i = 0; i < gridNumber; i++) {
@@ -39,15 +54,23 @@ button.addEventListener("click",
             grid.append(squareElement);
             squareElement.append(contentElement);
 
-
             contentElement.addEventListener("click", 
             function(){
-                console.log(this.innerText);
-                this.classList.toggle("content_activation");
-                squareElement.classList.toggle("activation");
+                if (bombElement.includes(Number(contentElement.innerHTML))) {
+                    console.log(this.innerText = 'bomba');
+                    this.classList.toggle("content_activation_bomb");
+                    squareElement.classList.toggle("activation");
+                } else {
+                    console.log(this.innerText);
+                    this.classList.toggle("content_activation");
+                    squareElement.classList.toggle("activation");
+                }
+
             })
 
         } 
+
+
         
        
 });

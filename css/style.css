@@ -1,4 +1,6 @@
 body {
+    min-width: 800px;
+    /* min-height: 1080px; */
     background-image: url('../img/snapedit_1707390661297\ \(1\).png');
     background-size: cover;
     background-position: top;
@@ -75,4 +77,10 @@ body {
     background-color: #2dffff;
     box-shadow: none!important;
     border: 2px solid #ff29ff;
+}
+
+.content_activation_bomb {
+    background-color: #ff29ff;
+    box-shadow: none!important;
+    border: 2px solid #2dffff;
 }
