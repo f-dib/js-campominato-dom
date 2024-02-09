@@ -1,7 +1,6 @@
 let button = document.querySelector("#button");
 let grid = document.querySelector("#grid");
 
-// EXPERIMENT BONUS 1
 let message = document.createElement('div');
 message.classList.add('my_layer');
 
@@ -41,7 +40,7 @@ button.addEventListener("click",
         // /*       CREAZIONE DI ARRAY GENERICO        */
         let bombElement = [];
 
-        while (bombElement.length < 16) {
+        while (bombElement.length < 1) {
             let randomNumber = (Math.floor(Math.random() * gridNumber) + 1);
 
             if (!bombElement.includes(randomNumber)){
@@ -100,15 +99,23 @@ button.addEventListener("click",
                     } else {
                         score.push(Number(contentElement.innerHTML));
                         document.querySelector(".point").innerHTML = `${score.length}`;
+                        
+                        if (gridNumber === (score.length + 16)) {
+                            grid.append(message);
+                            message.classList.add('win');
+                        };
+
                     } 
                 }
-                
+
             })
-            
+
         }        
        
+
 });
 
 function lose(){
     grid.append(message);
+    message.classList.add('lose');
 }

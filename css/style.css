@@ -1,6 +1,6 @@
 body {
     min-width: 800px;
-    background-image: url('../img/snapedit_1707390661297\ \(1\).png');
+    background-image: url('../img/snapedit_1707390661297\ \(2\).png');
     background-size: cover;
     background-position: top;
 }
@@ -106,10 +106,19 @@ body {
     height: 101%;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 10;
-    background-image: url('../img/pngtree-you-lose-text-with-neon-effect-png-image_6028163.png');
     background-size: cover;
     background-position: center;
 }
+
+.lose {
+    background-image: url('../img/—Pngtree—you\ lose\ text\ with\ neon_6028163.png');
+}
+
+.win {
+    background-image: url('../img/—Pngtree—game\ text\ you\ win\ retro_6006883.png');
+}
+
+/* MEDIA QUERY */
 
 @media screen and (min-width: 768px) {
     body {
@@ -120,12 +129,12 @@ body {
     }
 
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 1200px) {
     body {
         min-width: 800px;
-        background-image: url('../img/992px.png');
+        background-image: url('../img/snapedit_1707390661297\ \(1\).png');
         background-size: cover;
         background-position: top;
     }
-    
+
 }
