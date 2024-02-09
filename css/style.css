@@ -1,6 +1,5 @@
 body {
     min-width: 800px;
-    /* min-height: 1080px; */
     background-image: url('../img/snapedit_1707390661297\ \(1\).png');
     background-size: cover;
     background-position: top;
@@ -58,7 +57,6 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    /* display: grid; ********vecchia impostazione*********/
     padding: 10px;
     width: 100%;
     height: 100%;
@@ -68,6 +66,7 @@ body {
     border-radius: 20px;
     transition: 0.13s ease-in-out;
     z-index: 1;
+    color: #f4f5f6;
 }
 
 .activation {
@@ -75,6 +74,7 @@ body {
 }
 
 .content_activation {
+    color: #2dffff;
     background-color: #2dffff;
     box-shadow: none!important;
     border: 2px solid #ff29ff;
@@ -100,10 +100,32 @@ body {
 /* EXPERIMENT BONUS 1 */
 .my_layer {
     position: absolute;
-    top: 0;
+    top: -5px;
     left: 0;
-    width: 800px;
-    height: 820px;
-    background-color: black;
+    width: 100%;
+    height: 101%;
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 10;
+    background-image: url('../img/pngtree-you-lose-text-with-neon-effect-png-image_6028163.png');
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        min-width: 800px;
+        background-image: url('../img/snapedit_1707390661297\ \(2\).png');
+        background-size: cover;
+        background-position: top;
+    }
+
+}
+@media screen and (min-width: 576px) {
+    body {
+        min-width: 800px;
+        background-image: url('../img/992px.png');
+        background-size: cover;
+        background-position: top;
+    }
+    
 }
