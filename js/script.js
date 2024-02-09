@@ -40,7 +40,7 @@ button.addEventListener("click",
         // /*       CREAZIONE DI ARRAY GENERICO        */
         let bombElement = [];
 
-        while (bombElement.length < 16) {
+        while (bombElement.length < 1) {
             let randomNumber = (Math.floor(Math.random() * gridNumber) + 1);
 
             if (!bombElement.includes(randomNumber)){
@@ -103,6 +103,7 @@ button.addEventListener("click",
                         if (gridNumber === (score.length + 16)) {
                             grid.append(message);
                             message.classList.add('win');
+                            message.classList.remove('lose');
                         };
 
                     } 
@@ -118,4 +119,5 @@ button.addEventListener("click",
 function lose(){
     grid.append(message);
     message.classList.add('lose');
+    message.classList.remove('win');
 }
