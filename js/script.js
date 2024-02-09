@@ -40,7 +40,7 @@ button.addEventListener("click",
         // /*       CREAZIONE DI ARRAY GENERICO        */
         let bombElement = [];
 
-        while (bombElement.length < 1) {
+        while (bombElement.length < 16) {
             let randomNumber = (Math.floor(Math.random() * gridNumber) + 1);
 
             if (!bombElement.includes(randomNumber)){
