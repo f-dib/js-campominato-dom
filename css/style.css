@@ -1,8 +1,28 @@
+@font-face {
+    font-family: 'cyber';
+    src: url('../font/GlitchGoblin-2O87v.woff2') format(woff2);
+    font-size: normal;
+    font-weight: normal;
+}
+
 body {
+    font-family: 'cyber';
     min-width: 800px;
     background-image: url('../img/snapedit_1707390661297\ \(2\).png');
     background-size: cover;
     background-position: top;
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
+    color: #2dffff; 
+    text-shadow: 2px 8px 20px #ff29ff;
+}
+
+span {
+    color: #2dffff; 
+    text-shadow: 2px 8px 20px #ff29ff;
 }
 
 .my-btn {
